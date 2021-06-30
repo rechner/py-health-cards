@@ -2,9 +2,12 @@ import base64
 import json
 import logging
 import re
+import urllib.request
 import zlib
 from typing import Any, Dict, Optional, Union
 
+from jwcrypto.jwk import JWKSet
+from jwcrypto import jws
 
 CHUNKING_RE = re.compile(r'^shc:/(\d*)/(\d*)/(\d*)$')
 logger = logging.getLogger(__name__)
@@ -18,6 +21,10 @@ class ParserError(BaseError):
     pass
 
 
+class VerificationError(BaseError):
+    pass
+
+
 class JWS(object):
     def __init__(self, jws: str):
         self.jws = jws
@@ -25,6 +32,7 @@ class JWS(object):
         self.payload = None
         self.signature = None
         self.issuer = None
+        self.verified = False
         self._decode_jws()
         self._validate_jwt()
 
@@ -56,9 +64,23 @@ class JWS(object):
 
     def _validate_jwt(self):
         key_url = f"{self.issuer}/.well-known/jwks.json"
-        logger.debug(f"Fetching JWK from issuer: {key_url}")
+        keyset = JWKSet()
+        with urllib.request.urlopen(key_url) as response:
+            data = response.read()
+            keyset.import_keyset(data)
+            logger.debug(f"Fetching JWK from issuer: {key_url}")
+            key = keyset.get_key(self.header['kid'])
+            logger.debug(f"Using key {key} from keyset.")
+            jws_token = jws.JWS()
+            jws_token.deserialize(self.jws)
 
+            # FIXME: Specify expected algorithms or at least prevent
+            jws_token.verify(key)
+            self.verified = jws_token.is_valid
+        return self.verified
 
+    def as_dict(self):
+        pass
 
 def decode_qr_to_jws(encoded_list: Union[list, str]) -> str:
     """
