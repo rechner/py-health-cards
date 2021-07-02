@@ -4,12 +4,12 @@ import logging
 import re
 import urllib.request
 import zlib
-from typing import Any, Dict, Optional, Union
+from typing import Dict, Optional, Union
 
-from jwcrypto.jwk import JWKSet
 from jwcrypto import jws
+from jwcrypto.jwk import JWKSet
 
-CHUNKING_RE = re.compile(r'^shc:/(\d*)/(\d*)/(\d*)$')
+CHUNKING_RE = re.compile(r"^shc:/(\d*)/(\d*)/(\d*)$")
 logger = logging.getLogger(__name__)
 
 
@@ -45,18 +45,20 @@ class JWS(object):
 
         jws_parts = list(map(decode_base64, self.jws.split(".")))
         if len(jws_parts) != 3:
-            raise ParserError(f"JWS token was expected to have 3 parts, {len(jws_parts)} parts found.")
+            raise ParserError(
+                f"JWS token was expected to have 3 parts, {len(jws_parts)} parts found."
+            )
 
         logger.debug(f"JWS decoded to: {jws_parts}")
         self.header = json.loads(jws_parts[0])
 
         payload: bytes = jws_parts[1]
-        if 'zip' in self.header:
+        if "zip" in self.header:
             payload: bytes = zlib.decompress(jws_parts[1], wbits=-15)
         self.payload = json.loads(payload)
 
         try:
-            self.issuer = self.payload['iss']
+            self.issuer = self.payload["iss"]
         except KeyError:
             raise ParserError("Payload is missing required field 'iss'")
 
@@ -69,18 +71,24 @@ class JWS(object):
             data = response.read()
             keyset.import_keyset(data)
             logger.debug(f"Fetching JWK from issuer: {key_url}")
-            key = keyset.get_key(self.header['kid'])
+            key = keyset.get_key(self.header["kid"])
             logger.debug(f"Using key {key} from keyset.")
             jws_token = jws.JWS()
             jws_token.deserialize(self.jws)
 
-            # FIXME: Specify expected algorithms or at least prevent
+            # FIXME: Specify expected algorithms or at least prevent alg:none
             jws_token.verify(key)
             self.verified = jws_token.is_valid
         return self.verified
 
     def as_dict(self):
-        pass
+        result = {
+            "header": self.header,
+            "payload": self.payload,
+            "verification": {"verified": self.verified},
+        }
+        return result
+
 
 def decode_qr_to_jws(encoded_list: Union[list, str]) -> str:
     """
@@ -104,12 +112,14 @@ def decode_qr_to_jws(encoded_list: Union[list, str]) -> str:
             chunk_count = int(chunking_match.group(1))
             chunks_total = int(chunking_match.group(2))
             chunk_body = chunking_match.group(3)
-            logger.debug(f"Got chunk {chunk_count} of {chunks_total}: {chunk_body[:10]}...")
+            logger.debug(
+                f"Got chunk {chunk_count} of {chunks_total}: {chunk_body[:10]}..."
+            )
 
         else:
             chunk_count = 1
             chunks_total = 1
-            chunk_body = encoded.split('/')[-1]
+            chunk_body = encoded.split("/")[-1]
 
         if len(chunk_body) % 2 != 0:
             raise ParserError("Chunk body length must be even (2 digits per character)")
@@ -118,13 +128,17 @@ def decode_qr_to_jws(encoded_list: Union[list, str]) -> str:
 
         # Decode 2-digit integers into bytes to reconstruct the base64 string:
         parts: Optional[re.match] = re.findall("..", chunk_body)
-        jws_part: str = "".join([ chr(int(p) + 45) for p in parts ])
+        jws_part: str = "".join([chr(int(p) + 45) for p in parts])
         reconstructed[chunk_count] = jws_part
 
     if chunks_total_history.count(chunks_total_history[0]) != len(chunks_total_history):
-        raise ParserError(f"An SHC chunk provided did not match the expected number of chunks {chunks_total_history[0]}")
-    if list(reconstructed.keys()) != list(range(1, chunks_total+1)):
-        raise ParserError(f"An expected chunk required to reconstruct this SHC is missing")
+        raise ParserError(
+            f"An SHC chunk provided did not match the expected number of chunks {chunks_total_history[0]}"
+        )
+    if list(reconstructed.keys()) != list(range(1, chunks_total + 1)):
+        raise ParserError(
+            "An expected chunk required to reconstruct this SHC is missing"
+        )
 
     jws = "".join(reconstructed.values())
     logger.debug(f"Reconstructed JWS from {chunks_total_history[0]} chunks: {jws}")
@@ -138,7 +152,9 @@ def setup_logging() -> None:
     ch.setLevel(logging.DEBUG)
 
     # create formatter
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    formatter = logging.Formatter(
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
 
     # add formatter to ch
     ch.setFormatter(formatter)
