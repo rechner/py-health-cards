@@ -1,7 +1,7 @@
 from unittest import TestCase, mock
 from unittest.mock import Mock
 
-from healthcards import parser
+from src.healthcards import parser
 
 from . import test_data
 

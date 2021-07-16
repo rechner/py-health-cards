@@ -4,4 +4,6 @@ __pycache__
 .idea/
 venv/
 htmlcov/
+dist/
 .coverage
+src/healthcards.egg-info/

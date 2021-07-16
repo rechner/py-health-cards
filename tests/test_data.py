@@ -55,7 +55,7 @@ DOUBLE_SHC = [
 
 INVALID_DOUBLE_SHC = ["shc:/1/2/5672", "shc:/1/3/1122"]
 
-DECODED_SHC_SHC = {
+DECODED_SHC_DICT = {
     "header": {
         "alg": "ES256",
         "kid": "3Kfdg-XwP-7gXyywtUfUADwBumDOPKMQx-iELL11W9s",
@@ -75,7 +75,7 @@ DECODED_SHC_SHC = {
                                 "name": [
                                     {
                                         "family": "Anyperson",
-                                        "given": ["Johnathan", "Biggleston " "III"],
+                                        "given": ["Johnathan", "Biggleston III"],
                                     }
                                 ],
                                 "resourceType": "Patient",
@@ -90,7 +90,7 @@ DECODED_SHC_SHC = {
                                 "occurrenceDateTime": "2021-01-01",
                                 "patient": {"reference": "resource:0"},
                                 "performer": [
-                                    {"actor": {"display": "ABC " "General " "Hospital"}}
+                                    {"actor": {"display": "ABC General Hospital"}}
                                 ],
                                 "resourceType": "Immunization",
                                 "status": "completed",
@@ -111,7 +111,7 @@ DECODED_SHC_SHC = {
                                 "occurrenceDateTime": "2021-01-29",
                                 "patient": {"reference": "resource:0"},
                                 "performer": [
-                                    {"actor": {"display": "ABC " "General " "Hospital"}}
+                                    {"actor": {"display": "ABC General Hospital"}}
                                 ],
                                 "resourceType": "Immunization",
                                 "status": "completed",
