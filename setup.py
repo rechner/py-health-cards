@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="healthcards",
-    packages=find_packages(where="healthcards"),
+    packages=["healthcards"],
     version="0.1.0",
     description="Python parser for https://spec.smarthealth.cards",
     long_description=long_description,
@@ -20,4 +20,5 @@ setup(
     ],
     package_dir={"": "src"},
     python_requires=">=3.7",
+    install_requires=["jwcrypto"],
 )

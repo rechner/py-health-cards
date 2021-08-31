@@ -8,9 +8,10 @@ several localities (e.g. California, Quebec).
 ## Example
 
 ```python
-    from healthcards import parser
-    jws_str = parser.decode_qr_to_jws("shc:/...")
-    jws = parser.JWS(jws_str)
-    jws.verified
-    jws.as_dict()
+record = "shc:/..."
+from healthcards import parser
+jws_str = parser.decode_qr_to_jws(record)
+jws = parser.JWS(jws_str)
+jws.verified
+jws.as_dict()
 ```
