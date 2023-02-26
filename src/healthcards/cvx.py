@@ -20,6 +20,14 @@ CVX_CODES = {
             "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose",
         },
     },
+    221:  {
+        "name": "Moderna COVID-19 Vaccine",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 50 mcg/0.5 mL dose",
+        },
+    },
     208: {
         "name": "Pfizer COVID-19 Vaccine",
         "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
@@ -188,4 +196,35 @@ CVX_CODES = {
         },
         "manufacturer": {"long": "Unknown, Non-US", "mvx":"UNK", "short": "Unknown"},
     },
+    213: {
+        "name": "Unspecified COVID-19 Vaccine",
+        "description": {
+            "short": "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED",
+            "long": "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED",
+        }
+    },
+    217: {
+        "name": "Pfizer COVID-19 Vaccine",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3 mL dose",
+        },
+    },
+    218: {
+        "name": "Pfizer COVID-19 Vaccine",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL dose, tris-sucrose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 10 mcg/0.2 mL dose, tris-sucrose formulation",
+        },
+    },
+    219: {
+        "name": "Pfizer COVID-19 Vaccine",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 3 mcg/0.2 mL dose, tris-sucrose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 3 mcg/0.2 mL dose, tris-sucrose formulation",
+        },
+    }
 }
