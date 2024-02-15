@@ -17,15 +17,18 @@ with open('cvv_codes.csv', newline='') as csvfile:
     rowreader = csv.DictReader(csvfile)
     for row in rowreader:
         name = row.get("Sale Proprietary Name").split('\n')[0]
-        CVX_CODES[int(row["CVX Code"])] = {
-            "name": name,
-            "manufacturer": MANUFACTURERS.get(row.get("Manufacturer")),
-            "description": {
-                "short": row.get("CVX Short Description"),
-                "long": row.get("CVX Long Description"),
-            },
-        }
+        try:
+            CVX_CODES[int(row["CVX Code"])] = {
+                "name": name,
+                "manufacturer": MANUFACTURERS.get(row.get("Manufacturer")),
+                "description": {
+                    "short": row.get("CVX Short Description"),
+                    "long": row.get("CVX Long Description"),
+                },
+            }
+        except ValueError:
+            pass
 
 
 from pprint import pprint
-pprint(CVX_CODES)
+print(CVX_CODES)

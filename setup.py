@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="healthcards",
     packages=["healthcards"],
-    version="0.1.5",
+    version="0.1.6",
     description="Python parser for https://spec.smarthealth.cards",
     long_description=long_description,
     long_description_content_type="text/markdown",

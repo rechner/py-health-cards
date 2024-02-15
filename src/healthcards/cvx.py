@@ -14,49 +14,27 @@ CVX_CODES = {
         }
     },
     207: {
-        "name": "Moderna COVID-19 Vaccine",
+        "name": "Spikevax",
         "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
         "description": {
-            "short": "COVID-19, mRNA, LNP-S, PF, 100 mcg/ 0.5 mL dose",
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose",
-        },
-    },
-    221: {
-        "name": "Moderna COVID-19 Vaccine",
-        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
-        "description": {
-            "short": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL dose",
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 50 mcg/0.5 mL dose",
+            "short": "COVID-19, mRNA, LNP-S, PF, 100 mcg/0.5mL dose or 50 mcg/0.25mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose or 50 mcg/0.25mL dose",
         },
     },
     208: {
-        "name": "Pfizer COVID-19 Vaccine",
+        "name": "Pfizer COVID-19 Vaccine ",
         "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
         "description": {
             "short": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose",
-        },
-    },
-    210: {
-        "name": "AstraZeneca COVID-19 Vaccine",
-        "manufacturer": {
-            "long": "AstraZeneca Pharmaceuticals LP",
-            "short": "AstraZeneca",
-            "mvx": "ASZ",
-        },
-        "description": {
-            "short": "COVID-19 vaccine, vector-nr, rS-ChAdOx1, PF, 0.5 mL",
-            "long": "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-ChAdOx1, "
-                    "preservative free, 0.5 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3 mL dose",
         },
     },
     211: {
         "name": "Novavax COVID-19 Vaccine",
         "manufacturer": {"long": "Novavax, Inc.", "short": "Novavax", "mvx": "NVX"},
         "description": {
-            "short": "COVID-19 vaccine, Subunit, rS-nanoparticle+Matrix-M1 Adjuvant, PF, 0.5 mL",
-            "long": "SARS-COV-2 (COVID-19) vaccine, Subunit, recombinant spike protein-nanoparticle+Matrix-M1 "
-                    "Adjuvant, preservative free, 0.5mL per dose",
+            "short": "COVID-19, subunit, rS-nanoparticle+Matrix-M1 Adjuvant, PF, 0.5 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, subunit, recombinant spike protein-nanoparticle+Matrix-M1 Adjuvant, preservative free, 0.5mL dose",
         },
     },
     212: {
@@ -68,94 +46,8 @@ CVX_CODES = {
         },
         "description": {
             "short": "COVID-19 vaccine, vector-nr, rS-Ad26, PF, 0.5 mL",
-            "long": "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-Ad26, "
-                    "preservative free, 0.5 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-Ad26, preservative free, 0.5 mL",
         },
-    },
-    225: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, D614, "
-                    "prefusion spike recombinant protein subunit "
-                    "(CoV2 preS dTM), AS03 adjuvant added, "
-                    "preservative free, 5mcg/0.5mL dose",
-            "short": "COVID-19, D614, recomb, preS dTM, AS03 "
-                     "adjuvant add, PF, 5mcg/0.5mL",
-        },
-        "manufacturer": {"long": "Sanofi Pasteur", "mvx": "PMC", "short": "Sanofi"},
-        "name": "Sanofi Pasteur COVID-19 Vaccine, booster dose, adult",
-    },
-    228: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike "
-                    "protein, LNP, preservative free, pediatric "
-                    "25 mcg/0.25 mL dose",
-            "short": "COVID-19, mRNA, LNP-S, PF, pediatric 25 " "mcg/0.25 mL dose",
-        },
-        "manufacturer": {"long": "Moderna US, Inc.", "mvx": "MOD", "short": "Moderna"},
-        "name": "Moderna COVID-19 Vaccine ",
-    },
-    229: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike "
-                    "protein, LNP, bivalent booster, preservative "
-                    "free, 50 mcg/0.5 mL or 25mcg/0.25mL dose",
-            "short": "COVID-19, mRNA, LNP-S, bivalent booster, "
-                     "PF, 50 mcg/0.5 mL or 25mcg/0.25mL dose",
-        },
-        "manufacturer": {"long": "Moderna US, Inc.", "mvx": "MOD", "short": "Moderna"},
-        "name": "Moderna COVID-19 Vaccine Bivalent Booster",
-    },
-    230: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike "
-                    "protein, LNP, bivalent booster, preservative "
-                    "free, 10 mcg/0.2 mL dose",
-            "short": "COVID-19, mRNA, LNP-S, bivalent booster, " "PF, 10 mcg/0.2 mL",
-        },
-        "manufacturer": {"long": "Moderna US, Inc.", "mvx": "MOD", "short": "Moderna"},
-        "name": "Moderna COVID-19 Vaccine Bivalent Booster",
-    },
-    300: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike "
-                    "protein, LNP, bivalent booster, preservative "
-                    "free, 30 mcg/0.3mL dose, tris-sucrose "
-                    "formulation",
-            "short": "COVID-19, mRNA, LNP-S, bivalent booster, "
-                     "PF, 30 mcg/0.3 mL dose",
-        },
-        "manufacturer": {"long": "Pfizer-BioNTech", "mvx": "PFR", "short": "Pfizer"},
-        "name": "Pfizer-BioNTech COVID-19 Vaccine Bivalent Booster",
-    },
-    301: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike "
-                    "protein, LNP, bivalent booster, preservative "
-                    "free, 10 mcg/0.2 mL dose, tris-sucrose "
-                    "formulation",
-            "short": "COVID-19, mRNA, LNP-S, bivalent booster, "
-                     "PF, 10 mcg/0.2 mL dose",
-        },
-        "manufacturer": {"long": "Pfizer-BioNTech", "mvx": "PFR", "short": "Pfizer"},
-        "name": "Pfizer-BioNTech COVID-19 Vaccine Bivalent Booster",
-    },
-    302: {
-        "description": {
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike "
-                    "protein, LNP, bivalent, preservative free, 3 "
-                    "mcg/0.2 mL dose, tris-sucrose formulation",
-            "short": "COVID-19, mRNA, LNP-S, bivalent, PF, 3 " "mcg/0.2 mL dose",
-        },
-        "manufacturer": {"long": "Pfizer-BioNTech", "mvx": "PFR", "short": "Pfizer"},
-        "name": "Pfizer-BioNTech COVID-19 Vaccine Bivalent ",
-    },
-    500: {
-        "name": "COVID-19 Non-US Vaccine, Product Unknown",
-        "description": {
-            "short": "SARS-COV-2 COVID-19 Non-US Vaccine, Specific Product Unknown",
-            "long": "Pandemic Non-US Covid Administration - specific CVX or product unknown",
-        },
-        "manufacturer": {"long": "Unknown, Non-US", "mvx": "UNK", "short": "Unknown"},
     },
     213: {
         "name": "Unspecified COVID-19 Vaccine",
@@ -168,26 +60,144 @@ CVX_CODES = {
         "name": "Pfizer COVID-19 Vaccine",
         "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
         "description": {
-            "short": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3 mL dose",
+            "short": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose, tris-sucrose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3 mL dose, tris-sucrose formulation",
         },
     },
     218: {
-        "name": "Pfizer COVID-19 Vaccine",
+        "name": "Pfizer COVID-19 Vaccine ",
         "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
         "description": {
             "short": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL dose, tris-sucrose",
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 10 mcg/0.2 mL dose, "
-                    "tris-sucrose formulation",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 10 mcg/0.2 mL dose, tris-sucrose formulation",
         },
     },
     219: {
-        "name": "Pfizer COVID-19 Vaccine",
+        "name": "Pfizer COVID-19 Vaccine ",
         "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
         "description": {
             "short": "COVID-19, mRNA, LNP-S, PF, 3 mcg/0.2 mL dose, tris-sucrose",
-            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 3 mcg/0.2 mL dose, "
-                    "tris-sucrose formulation",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 3 mcg/0.2 mL dose, tris-sucrose formulation",
         },
-    }
+    },
+    221: {
+        "name": "Moderna COVID-19 Vaccine Booster",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 50 mcg/0.5 mL dose",
+        },
+    },
+    225: {
+        "name": "Sanofi Pasteur COVID-19 Vaccine Booster",
+        "manufacturer": {"long": "Sanofi Pasteur", "short": "Sanofi", "mvx": "PMC"},
+        "description": {
+            "short": "COVID-19, D614, recomb, preS dTM, AS03 adjuvant add, PF, 5mcg/0.5mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, D614, prefusion spike recombinant protein subunit (CoV2 preS dTM), AS03 adjuvant added, preservative free, 5mcg/0.5mL dose",
+        },
+    },
+    228: {
+        "name": "Moderna COVID-19 Vaccine",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, pediatric 25 mcg/0.25 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, pediatric 25 mcg/0.25 mL dose",
+        },
+    },
+    229: {
+        "name": "Moderna COVID-19 Vaccine Bivalent Booster",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, bivalent booster, PF, 50 mcg/0.5 mL or 25mcg/0.25mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 50 mcg/0.5 mL or 25mcg/0.25mL dose",
+        },
+    },
+    230: {
+        "name": "Moderna COVID-19 Vaccine Bivalent Booster",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, bivalent booster, PF, 10 mcg/0.2 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 10 mcg/0.2 mL dose",
+        },
+    },
+    300: {
+        "name": "Pfizer COVID-19 Vaccine Bivalent Booster",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, bivalent booster, PF, 30 mcg/0.3 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 30 mcg/0.3mL dose, tris-sucrose formulation",
+        },
+    },
+    301: {
+        "name": "Pfizer COVID-19 Vaccine Bivalent Booster",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, bivalent booster, PF, 10 mcg/0.2 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 10 mcg/0.2 mL dose, tris-sucrose formulation",
+        },
+    },
+    302: {
+        "name": "Pfizer COVID-19 Vaccine Bivalent ",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, bivalent, PF, 3 mcg/0.2 mL dose",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent, preservative free, 3 mcg/0.2 mL dose, tris-sucrose formulation",
+        },
+    },
+    308: {
+        "name": "Pfizer COVID-19 Vaccine (2023-2024)",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 3 mcg/0.3 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, tris-sucrose, 3 mcg/0.3 mL dose",
+        },
+    },
+    309: {
+        "name": "COMIRNATY (COVID-19 Vaccine, mRNA, 2023-2024)",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, tris-sucrose, 30 mcg/0.3 mL dose",
+        },
+    },
+    310: {
+        "name": "Pfizer COVID-19 Vaccine (2023-2024)",
+        "manufacturer": {"long": "Pfizer-BioNTech", "short": "Pfizer", "mvx": "PFR"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, tris-sucrose, 10 mcg/0.3 mL dose",
+        },
+    },
+    311: {
+        "name": "Moderna COVID-19 Vaccine",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL ",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 25 mcg/0.25 mL dose",
+        },
+    },
+    313: {
+        "name": "Novavax COVID-19 Vaccine, Adjuvanted",
+        "manufacturer": {"long": "Novavax, Inc.", "short": "Novavax", "mvx": "NVX"},
+        "description": {
+            "short": "COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, subunit, recombinant spike protein-nanoparticle+Matrix-M1 Adjuvant, preservative free, 5 mcg/0.5 mL dose",
+        },
+    },
+    312: {
+        "name": "Spikevax",
+        "manufacturer": {"long": "Moderna US, Inc.", "short": "Moderna", "mvx": "MOD"},
+        "description": {
+            "short": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL",
+            "long": "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 50 mcg/0.5 mL dose",
+        },
+    },
+    500: {
+        "name": "COVID-19 Non-US Vaccine, Product Unknown",
+        "description": {
+            "short": "SARS-COV-2 COVID-19 Non-US Vaccine, Specific Product Unknown",
+            "long": "Pandemic Non-US Covid Administration - specific CVX or product unknown",
+        },
+        "manufacturer": {"long": "Unknown, Non-US", "mvx": "UNK", "short": "Unknown"},
+    },
 }
